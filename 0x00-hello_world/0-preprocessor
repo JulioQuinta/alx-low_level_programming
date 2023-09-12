@@ -1,3 +1,6 @@
 #!/bin/bash
-gcc -E $CFILE -o c
+if [ -z "$CFILE" ]; then
+  echo "CFILE is not set. Please export the C file name in the CFILE variable."
+  exit 1
+fi
 
